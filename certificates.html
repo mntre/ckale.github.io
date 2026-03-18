@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verified Credentials | Satoru Gojo Version</title>
+    <title>Verified Credentials | Yumeko Jabami Edition</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&family=JetBrains+Mono:wght@400;700&display=swap');
         
-        body { font-family: 'Space Grotesk', sans-serif; background-color: #020617; }
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #000000; }
         
         .glass-dark {
-            background: rgba(15, 23, 42, 0.85);
+            background: rgba(10, 10, 10, 0.8);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(220, 38, 38, 0.2); /* Subtle Red Border */
         }
 
-        /* Video Background Styling */
-        #bg-video {
+        /* Video Background Logic */
+        .video-bg {
             position: fixed;
             top: 50%;
             left: 50%;
@@ -31,93 +31,84 @@
             object-fit: cover;
         }
 
-        .text-void { color: #ffffff; text-shadow: 0 0 15px rgba(168, 85, 247, 0.4); }
+        /* Default: Show Mobile Video, Hide Desktop */
+        #mobile-video { display: block; }
+        #desktop-video { display: none; }
+
+        /* Desktop Breakpoint: Show Desktop Video, Hide Mobile */
+        @media (min-width: 768px) {
+            #mobile-video { display: none; }
+            #desktop-video { display: block; }
+        }
+
+        /* Yumeko Red Glow Text */
+        .text-kakegurui { 
+            color: #ffffff; 
+            text-shadow: 0 0 10px rgba(220, 38, 38, 0.8), 0 0 20px rgba(0, 0, 0, 1); 
+        }
     </style>
 </head>
 <body class="min-h-screen text-white overflow-x-hidden">
 
-    <video autoplay muted loop playsinline id="bg-video">
-        <source src="gojo.mp4" type="video/mp4">
+    <video autoplay muted loop playsinline id="mobile-video" class="video-bg">
+        <source src="girl1.mp4" type="video/mp4">
     </video>
 
-    <div class="fixed inset-0 bg-slate-950/85 -z-[90]"></div>
+    <video autoplay muted loop playsinline id="desktop-video" class="video-bg">
+        <source src="girl2.mp4" type="video/mp4">
+    </video>
+
+    <div class="fixed inset-0 bg-gradient-to-b from-black/60 via-black/80 to-red-950/40 -z-[90]"></div>
 
     <div class="relative z-10 py-12 px-6">
         <div class="max-w-6xl mx-auto">
             
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6 border-b border-white/10 pb-8">
-                <a href="index.html" class="group flex items-center gap-3 text-purple-400 font-black hover:text-white transition-all tracking-[0.2em] text-xs font-mono">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-6 border-b border-red-600/30 pb-8">
+                <a href="index.html" class="group flex items-center gap-3 text-red-500 font-black hover:text-white transition-all tracking-[0.2em] text-xs font-mono">
                     <span class="text-2xl group-hover:-translate-x-2 transition-transform">←</span> 
-                    EXIT DOMAIN
+                    LEAVE THE TABLE
                 </a>
                 <div class="text-right">
-                    <h1 class="text-4xl font-black uppercase italic tracking-tighter text-void">Technical Credentials</h1>
-                    <p class="text-[10px] text-blue-400 font-bold uppercase tracking-[0.5em] mt-2">Six Eyes Authentication System</p>
+                    <h1 class="text-4xl font-black uppercase italic tracking-tighter text-kakegurui">Technical Credentials</h1>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                 
-                <div class="glass-dark rounded-[2.5rem] overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(168,85,247,0.2)] border-t-4 border-blue-500">
+                <div class="glass-dark rounded-[2rem] overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(220,38,38,0.3)] border-t-4 border-red-600">
                     <div class="overflow-hidden bg-black/60 relative">
                         <img src="cert1.jpg" alt="Atlassian ITSM" class="w-full h-72 object-contain p-6 transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-60"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                     </div>
                     <div class="p-10">
-                        <span class="text-[10px] font-mono text-blue-400 uppercase tracking-widest mb-2 block">Professional Grade</span>
+                        <span class="text-[10px] font-mono text-red-500 uppercase tracking-widest mb-2 block font-bold">Winning Hand</span>
                         <h3 class="text-2xl font-black leading-tight uppercase tracking-tight italic">
                             Atlassian IT Service Management (ITSM) Professional Certificate
                         </h3>
                     </div>
                 </div>
 
-                <div class="glass-dark rounded-[2.5rem] overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(168,85,247,0.2)] border-t-4 border-purple-600">
+                <div class="glass-dark rounded-[2rem] overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(220,38,38,0.3)] border-t-4 border-slate-100">
                     <div class="overflow-hidden bg-black/60 relative">
                         <img src="cert2.jpg" alt="Jira Administration Guide" class="w-full h-72 object-contain p-6 transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-60"></div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                     </div>
                     <div class="p-10">
-                        <span class="text-[10px] font-mono text-purple-400 uppercase tracking-widest mb-2 block">Logic Mastery</span>
+                        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2 block font-bold">The Dealer's Logic</span>
                         <h3 class="text-2xl font-black leading-tight uppercase tracking-tight italic">
                             Complete Guide to Jira Administration: Configuration & Automation
                         </h3>
                     </div>
                 </div>
 
-                <div class="glass-dark rounded-[2.5rem] overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(168,85,247,0.2)] border-t-4 border-white">
-                    <div class="overflow-hidden bg-black/60 relative">
-                        <img src="cert3.jpg" alt="Forge Fundamentals" class="w-full h-72 object-contain p-6 transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-10">
-                        <span class="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-2 block">System Forge</span>
-                        <h3 class="text-2xl font-black leading-tight uppercase tracking-tight italic">
-                            Atlassian Credentialed in Forge Fundamentals
-                        </h3>
-                    </div>
                 </div>
 
-                <div class="glass-dark rounded-[2.5rem] overflow-hidden group transition-all duration-500 hover:shadow-[0_0_50px_rgba(168,85,247,0.2)] border-t-4 border-blue-400">
-                    <div class="overflow-hidden bg-black/60 relative">
-                        <img src="cert4.jpg" alt="Rovo Fundamentals" class="w-full h-72 object-contain p-6 transition-transform duration-700 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-10">
-                        <span class="text-[10px] font-mono text-blue-300 uppercase tracking-widest mb-2 block">AI Intelligence</span>
-                        <h3 class="text-2xl font-black leading-tight uppercase tracking-tight italic">
-                            Atlassian Credentialed in Rovo Fundamentals
-                        </h3>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="mt-20 p-10 rounded-[3rem] glass-dark border border-purple-500/20 text-center relative overflow-hidden">
-                <div class="absolute top-0 left-0 w-1 h-full bg-purple-500"></div>
+            <div class="mt-20 p-10 rounded-[3rem] glass-dark border border-red-600/20 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-1 h-full bg-red-600"></div>
                 <p class="italic text-slate-300 text-lg mb-4">
                     "Continuous learning is the core of effective automation. These certifications represent my commitment to mastering the Atlassian ecosystem."
                 </p>
-                <p class="text-[10px] font-mono text-purple-500 font-bold uppercase tracking-[0.5em]">System Logic Confirmed</p>
+                <p class="text-[10px] font-mono text-red-600 font-bold uppercase tracking-[0.5em]">Betting on Knowledge</p>
             </div>
 
         </div>
