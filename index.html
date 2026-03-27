@@ -53,7 +53,7 @@
         .marquee {
             display: flex; overflow: hidden; user-select: none; gap: 4rem;
             mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
-            padding: 20px 0;
+            padding: 10px 0;
         }
         .marquee-content {
             display: flex; flex-shrink: 0; align-items: center; justify-content: space-around;
@@ -61,15 +61,15 @@
         }
         
         .tech-icon { 
-            font-size: 3.5rem; 
+            font-size: 3rem; 
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            opacity: 0.9;
-            filter: drop-shadow(0 0 8px var(--accent-glow));
+            opacity: 0.8;
+            filter: drop-shadow(0 0 5px var(--accent-glow));
         }
         .tech-icon:hover { 
             opacity: 1; 
-            transform: scale(1.3) translateY(-10px);
-            filter: drop-shadow(0 0 20px var(--accent-glow));
+            transform: scale(1.2) translateY(-5px);
+            filter: drop-shadow(0 0 15px var(--accent-glow));
         }
 
         @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-100%); } }
@@ -116,77 +116,67 @@
     <div class="relative z-10 min-h-screen flex flex-col items-center justify-center py-12 px-6">
         <div class="max-w-4xl w-full">
             
-            <div class="text-center mb-10">
-                <div class="relative inline-block mb-6">
-                    <img src="charvin.jpg" class="w-32 h-32 rounded-3xl object-cover border-2 border-accent shadow-[0_0_25px_rgba(220,38,38,0.4)] transition-all duration-500">
-                    <div class="absolute -bottom-2 -right-2 bg-accent px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter border-4 border-black transition-colors duration-500">Active</div>
+            <div class="text-center mb-8">
+                <div class="relative inline-block mb-4">
+                    <img src="charvin.jpg" class="w-28 h-28 rounded-3xl object-cover border-2 border-accent shadow-[0_0_25px_rgba(220,38,38,0.4)]">
                 </div>
-                <h1 class="text-5xl font-black uppercase tracking-tighter italic name-glow">Charvin Kale M. Peñaverde</h1>
-                <p class="text-accent font-mono tracking-[0.4em] uppercase text-sm mt-2">Jira Developer</p>
+                <h1 class="text-4xl font-black uppercase tracking-tighter italic name-glow">Charvin Kale M. Peñaverde</h1>
+                <p class="text-accent font-mono tracking-[0.4em] uppercase text-xs mt-2">Jira Developer</p>
             </div>
 
-            <div class="glass-card p-8 md:p-10 rounded-[2.5rem] border-b-4 border-accent mb-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    <div class="space-y-4">
+            <div class="glass-card p-6 md:p-8 rounded-[2rem] border-b-4 border-accent mb-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="space-y-3">
                         <div class="flex items-center gap-3">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-accent"></i>
-                            <span class="text-sm font-bold text-slate-200">Santa Rosa City, Laguna, Philippines</span>
+                            <i data-lucide="map-pin" class="w-4 h-4 text-accent"></i>
+                            <span class="text-xs font-bold text-slate-200">Pasig, Metro Manila</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i data-lucide="mail" class="w-5 h-5 text-accent"></i>
-                            <span class="text-sm font-bold text-slate-200">charvinpe08@email.com</span>
+                            <i data-lucide="mail" class="w-4 h-4 text-accent"></i>
+                            <span class="text-xs font-bold text-slate-200">charvinkale@email.com</span>
                         </div>
                     </div>
-
-                    <div class="grid grid-cols-2 gap-3">
-                        <a href="viber://chat?number=+639956674596" class="flex items-center justify-center gap-2 p-3 rounded-xl border border-white/10 text-xs font-bold uppercase transition-all hover:border-[#7360f2] hover:text-[#7360f2] bg-white/5">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i> Viber
-                        </a>
-                        <a href="https://www.linkedin.com/in/charvin-kale-pe%C3%B1averde-1958ab320/" target="_blank" class="flex items-center justify-center gap-2 p-3 rounded-xl border border-white/10 text-xs font-bold uppercase transition-all hover:border-[#0077b5] hover:text-[#0077b5] bg-white/5">
-                            <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
-                        </a>
-                        <a href="https://github.com/mntre/ckale/blob/main/README.md" target="_blank" class="flex items-center justify-center gap-2 p-3 rounded-xl border border-white/10 text-xs font-bold uppercase transition-all hover:border-white hover:text-white bg-white/5">
-                            <i data-lucide="github" class="w-4 h-4"></i> GitHub
-                        </a>
-                        <a href="resume.pdf" download class="bg-accent text-white flex items-center justify-center gap-2 p-3 rounded-xl text-xs font-bold uppercase transition-all hover:bg-white hover:text-black">
-                            <i data-lucide="download" class="w-4 h-4"></i> Resume
-                        </a>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="viber://chat?number=+639956674596" class="flex items-center justify-center gap-2 p-2 rounded-lg border border-white/5 text-[10px] font-bold uppercase transition-all hover:border-accent bg-white/5">Viber</a>
+                        <a href="https://www.linkedin.com/in/charvin-kale-pe%C3%B1averde-1958ab320/" class="flex items-center justify-center gap-2 p-2 rounded-lg border border-white/5 text-[10px] font-bold uppercase transition-all hover:border-accent bg-white/5">LinkedIn</a>
+                        <a href="https://github.com/mntre/ckale/blob/main/README.md" class="flex items-center justify-center gap-2 p-2 rounded-lg border border-white/5 text-[10px] font-bold uppercase transition-all hover:border-accent bg-white/5">GitHub</a>
+                        <a href="resume.pdf" download class="bg-accent text-white flex items-center justify-center gap-2 p-2 rounded-lg text-[10px] font-bold uppercase transition-all hover:bg-white hover:text-black">Resume</a>
                     </div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                <a href="projects.html" class="glass-card p-10 rounded-[2.5rem] group text-center">
-                    <h2 class="text-2xl font-black uppercase italic mb-1 transition-colors">Project Registry</h2>
-                </a>
-                
-                <a href="certificates.html" class="glass-card p-10 rounded-[2.5rem] group text-center">
-                    <h2 class="text-2xl font-black uppercase italic mb-1 transition-colors">Verified Credentials</h2>
-                </a>
-            </div>
-
-            <div class="mb-12">
-                <p class="text-center text-slate-400 font-mono text-[11px] font-black uppercase tracking-[0.5em] mb-8">
-                    <span class="text-accent">●</span> System Architecture & Tooling <span class="text-accent">●</span>
-                </p>
+            <div class="mb-10 py-2">
+                <p class="text-center text-slate-500 font-mono text-[9px] font-black uppercase tracking-[0.4em] mb-4">Toolkit Deployment</p>
                 <div class="marquee">
                     <div class="marquee-content">
-                        <i class="devicon-html5-plain-wordmark tech-icon"></i>
-                        <i class="devicon-css3-plain-wordmark tech-icon"></i>
+                        <i class="devicon-html5-plain tech-icon"></i>
+                        <i class="devicon-css3-plain tech-icon"></i>
                         <i class="devicon-javascript-plain tech-icon"></i>
-                        <i class="devicon-python-plain-wordmark tech-icon"></i>
+                        <i class="devicon-python-plain tech-icon"></i>
                         <i class="devicon-azuresqldatabase-plain tech-icon"></i>
-                        <i class="devicon-jira-plain-wordmark tech-icon"></i>
+                        <i class="devicon-jira-plain tech-icon"></i>
                     </div>
                     <div class="marquee-content" aria-hidden="true">
-                        <i class="devicon-html5-plain-wordmark tech-icon"></i>
-                        <i class="devicon-css3-plain-wordmark tech-icon"></i>
+                        <i class="devicon-html5-plain tech-icon"></i>
+                        <i class="devicon-css3-plain tech-icon"></i>
                         <i class="devicon-javascript-plain tech-icon"></i>
-                        <i class="devicon-python-plain-wordmark tech-icon"></i>
+                        <i class="devicon-python-plain tech-icon"></i>
                         <i class="devicon-azuresqldatabase-plain tech-icon"></i>
-                        <i class="devicon-jira-plain-wordmark tech-icon"></i>
+                        <i class="devicon-jira-plain tech-icon"></i>
                     </div>
                 </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <a href="projects.html" class="glass-card p-8 rounded-[2rem] group text-center">
+                    <h2 class="text-xl font-black uppercase italic mb-1 transition-colors">Project Registry</h2>
+                    <span class="card-btn">Enter Domain</span>
+                </a>
+                
+                <a href="certificates.html" class="glass-card p-8 rounded-[2rem] group text-center">
+                    <h2 class="text-xl font-black uppercase italic mb-1 transition-colors">Verified Credentials</h2>
+                    <span class="card-btn">Inspect Seals</span>
+                </a>
             </div>
 
         </div>
